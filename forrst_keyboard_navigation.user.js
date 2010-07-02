@@ -106,6 +106,9 @@ var ForrstNavigator = function() {
 
   // For some reason, the jQuery keypress() event not working
   document.addEventListener("keypress", function(ev) {
+    if ($('input:focus').length > 0 || $('textarea:focus').length > 0)
+      return;
+
     if (!ev) ev = window.event;
 
     var key = ev.keyCode ? ev.keyCode : ev.which;
