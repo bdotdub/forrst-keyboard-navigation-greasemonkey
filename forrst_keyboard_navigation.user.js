@@ -4,10 +4,9 @@
 // @description    Adds forrst post keyboard navigation
 // @include        http://forrst.com/*
 // @include        http://www.forrst.com/*
-// @require        http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 // ==/UserScript==
 
-(function() {
+var ForrstNavigator = function() {
   var Keys = {
     c: 99,
     g: 103,
@@ -120,6 +119,29 @@
         break;
     }
   }, true);
+};
 
-})();
+// via http://erikvold.com/blog/index.cfm/2010/6/14/using-jquery-with-a-user-script
+function addJQuery(callback) {
+  var script = document.createElement("script");
+  var loadCallback = function() {
+    var script = document.createElement("script");
+    script.textContent = "(" + callback.toString() + ")();";
+    document.body.appendChild(script);
+  };
+
+  if (typeof($) !== undefined) {
+    loadCallback();
+  }
+  else {
+    script.setAttribute("src", "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js");
+    script.addEventListener('load', function() {
+      loadCallback();
+    }, false);
+
+    document.body.appendChild(script);
+  }
+}
+
+addJQuery(ForrstNavigator);
 

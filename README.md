@@ -30,6 +30,9 @@ INSTALLING
 You should have [Greasemonkey](http://www.greasespot.net/) 0.8 or above on
 Firefox. You must have this to run this Greasemonkey script.
 
+Or if you use [Chrome](http://www.google.com/chrome), it should work without
+any extensions, just follow the next step.
+
 Then go to http://github.com/bdotdub/forrst-keyboard-navigation-greasemonkey/raw/master/forrst_keyboard_navigation.user.js
 and it should prompt you to install it.
 
@@ -43,9 +46,7 @@ This is a very minimal script, so I would love to have more help with ideas
 or improvements to the script. Some of the TODOs I have in mind for this is:
 
 * Somehow get `like` to work
-* Make this work for [Chrome](http://www.google.com/chrome). Theorhetically,
-  the script should work since Chrome supports Greasemonkey scripts, but
-  didn't work for me. If anyone can help out with this, it would be AWESOME
+* Keyboard shortcut menu like the one in Gmail
 
 
 LICENSE
