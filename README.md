@@ -30,7 +30,7 @@ INSTALLING
 You should have [Greasemonkey](http://www.greasespot.net/) 0.8 or above on
 Firefox. You must have this to run this Greasemonkey script.
 
-Then go to http://github.com/bdotdub/forrst-keyboard-navigation-greasemonkey/blob/master/forrst_keyboard_navigation.user.js
+Then go to http://github.com/bdotdub/forrst-keyboard-navigation-greasemonkey/raw/master/forrst_keyboard_navigation.user.js
 and it should prompt you to install it.
 
 And that's it!
