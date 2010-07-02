@@ -13,6 +13,7 @@ var ForrstNavigator = function() {
     j: 106,
     k: 107,
     l: 108,
+    r: 114,
     v: 118
   };
 
@@ -51,6 +52,14 @@ var ForrstNavigator = function() {
     goToNext: function() {
       var nextElement = Forrst.Window.closestElements('.activity').next;
       Forrst.Window.moveTo(nextElement, false);
+    }
+  };
+
+  Forrst.Post = {
+    reply: function() {
+      if (document.location.href.match(/^https?:\/\/(www\.)?forrst\.com\/posts/)) {
+        $('#comment_content').focus();
+      }
     }
   };
 
@@ -113,6 +122,9 @@ var ForrstNavigator = function() {
         break;
       case Keys.l:
         Forrst.Activity.toggleLike();
+        break;
+      case Keys.r:
+        Forrst.Post.reply();
         break;
       case Keys.v:
         Forrst.Activity.view();

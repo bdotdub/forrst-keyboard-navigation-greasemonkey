@@ -19,6 +19,7 @@ What can you do this script? On any Forrst page with a list of posts:
 * `j` - Go to next post
 * `k` - Go to previous post
 * `c` - New post
+* `r` - Reply to a post (on the post page)
 * `v` - View a post
 
 I wanted to add `like`, but because of security issues, Firefox won't let me do
